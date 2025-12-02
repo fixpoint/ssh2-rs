@@ -94,6 +94,10 @@ fn main() {
 
     cfg.define("HAVE_LONGLONG", None);
 
+    if env::var("CARGO_FEATURE_DSA").is_ok() {
+        cfg.define("LIBSSH2_DSA_ENABLE", None);
+    }
+
     if target.contains("windows") {
         cfg.include("libssh2/win32");
         cfg.define("LIBSSH2_WIN32", None);

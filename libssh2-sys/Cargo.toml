@@ -17,6 +17,7 @@ path = "lib.rs"
 vendored-openssl = ["openssl-sys/vendored"]
 zlib-ng-compat = ["libz-sys/zlib-ng"]
 openssl-on-win32 = ["openssl-sys"]
+dsa = []
 
 [dependencies]
 libc = "0.2"
